@@ -1,12 +1,12 @@
 .services{
     top: 2em;
-    min-height: 90vh;
+    height: 90vh;
     width: 100%;
     position: relative;
 }
 .servicesContainer{
-    
-    min-height: 80vh;
+    height: 100%;
+    width:100%;
 }
 .servicesTitle{
     justify-content: center;
@@ -18,7 +18,7 @@
 .servicesImage{
     object-fit: cover;
     width: 20%;
-    height: 50vh;   
+    height: 60vh;   
 }
 .servicesWrapper{  
     display: flex;
@@ -28,17 +28,18 @@
 .servicesText{
     padding: 0.1em;
     display: block;
-    color: blue;         
+    color: lightsalmon;         
     font-size: 22px;
     
 }
 .servicesList{
+    margin-top: -5px;
     list-style: none;
 }
 .servicesListWrapper ul li:before{ 
     content: '✓';
     padding-right: 5px;
-    color: blue;
+    color: orange;
     font-weight: 600;
 }
 .servicesListItem{

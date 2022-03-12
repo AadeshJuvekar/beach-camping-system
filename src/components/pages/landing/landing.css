@@ -14,7 +14,7 @@
     align-items: center;
     text-align: center;
     min-height: 90vh;
-    margin-left: -25%;
+    margin-right: -30%;
 }
 .landingBody{
     color: white;
@@ -25,6 +25,12 @@
     margin: auto 25%;
     font-size: 60px;
     font-weight: 600;
+}
+.landingDescription{
+    margin: auto 25%;
+    font-size: 40px;
+    font-weight: 600;
+    color: lightsalmon;
 }
 .landingButton{
     margin-top: 1em;

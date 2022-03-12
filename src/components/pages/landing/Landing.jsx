@@ -6,7 +6,12 @@ function Landing() {
     <div className="landing">
       <div className="landingContainer">
         <div className="landingBody">
-          <h1 className="landingText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. </h1>
+          <h1 className="landingText">Alibag Beach Camping</h1>
+          <h3 className="landingDescription">
+            Sky above, Sea Below <br />
+            Peace Within
+          </h3>
+
           <button className="landingButton">Packages</button>
           <button className="landingButton">Services</button>
         </div>
