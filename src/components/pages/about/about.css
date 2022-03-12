@@ -1,0 +1,31 @@
+.about{
+    top: 2rem;
+    min-height: 90vh;
+    width: 100%;
+    position: relative;
+    margin: 4em 0;
+}
+.aboutContainer{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+    min-width: 65%;
+}
+.aboutImage{
+    object-fit: cover;
+    width: 70%;
+    height: 30vh;   
+}
+.aboutWrapper{  
+    margin: auto 15%;
+}
+.aboutText{
+    padding: 0.1em;
+    display: block;
+    color: grey;       
+    text-align: justify;    
+    font-size: 22px;
+    
+}

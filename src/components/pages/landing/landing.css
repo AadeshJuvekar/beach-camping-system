@@ -1,0 +1,23 @@
+.landing{
+    background-image: url("/src/static/images/back.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+    width: 100%;
+    position: relative;
+}
+.landingContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+}
+.landingBody{
+    position: relative;    
+    width: 100%;
+}
+.landingText{
+    font-size: 30px;
+    font-weight: 600;
+}
