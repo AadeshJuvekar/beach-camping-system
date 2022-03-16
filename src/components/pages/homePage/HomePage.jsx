@@ -4,6 +4,7 @@ import Landing from "../landing/Landing";
 import About from "../about/About";
 import Services from "../services/Services";
 import Gallery from './../gallery/Gallery';
+import Packages from "../packages/Packages";
 
 function homePage() {
   return (
@@ -12,6 +13,7 @@ function homePage() {
       <About/>
       <Services/>
       <Gallery/>
+      <Packages/>
     </div>
   );
 }
