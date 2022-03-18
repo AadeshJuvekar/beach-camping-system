@@ -1,6 +1,6 @@
 .services{
-    top: 2em;
-    height: 90vh;
+    top: 4em;
+    height: 90%;
     width: 100%;
     position: relative;
 }
@@ -18,7 +18,7 @@
 .servicesImage{
     object-fit: cover;
     width: 20%;
-    height: 60vh;   
+    height: 60%;   
 }
 .servicesWrapper{  
     display: flex;

@@ -5,6 +5,8 @@ import About from "../about/About";
 import Services from "../services/Services";
 import Gallery from './../gallery/Gallery';
 import Packages from "../packages/Packages";
+import Pricing from "../packages/Packages";
+import SignIn from "../../signin/SignIn";
 
 function homePage() {
   return (
@@ -14,6 +16,7 @@ function homePage() {
       <Services/>
       <Gallery/>
       <Packages/>
+      <SignIn/>
     </div>
   );
 }
