@@ -12,16 +12,25 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-
+// import userSessionReducer from "../reducers/userSessionReducer";
+// import { Link, Navigate } from "react-router-dom";
+// import { userLogin, getSession } from "../actions/userSession";
+// import PropTypes from "prop-types";
+// import { connect } from "react-redux";
 const theme = createTheme();
+
 
 export default function SignIn() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
-      email: data.get("email"),
-      password: data.get("password"),
+      loginName: data.get("userName"),
+      pwd: data.get("password"),
+    });
+    console.log({
+      loginName: data.get("userName"),
+      pwd: data.get("password"),
     });
   };
 
@@ -53,10 +62,10 @@ export default function SignIn() {
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
+              id="loginName"
+              label="userName"
+              name="userName"
+              autoComplete="loginName"
               autoFocus
             />
             <TextField
@@ -67,7 +76,7 @@ export default function SignIn() {
               label="Password"
               type="password"
               id="password"
-              autoComplete="current-password"
+              autoComplete="pwd"
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
