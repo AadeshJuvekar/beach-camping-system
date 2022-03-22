@@ -12,13 +12,14 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+import { NavLink } from "react-router-dom";
 // import userSessionReducer from "../reducers/userSessionReducer";
 // import { Link, Navigate } from "react-router-dom";
 // import { userLogin, getSession } from "../actions/userSession";
 // import PropTypes from "prop-types";
 // import { connect } from "react-redux";
 const theme = createTheme();
-
 
 export default function SignIn() {
   // const [state, setstate] = useState({name:"" ,loginName:"",pwd:""} );
@@ -91,7 +92,9 @@ export default function SignIn() {
               </Grid>
               <Grid item>
                 <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
+                  <NavLink to="/api/register" variant="body2">
+                    {"Don't have an account? Sign Up"}
+                  </NavLink>
                 </Link>
               </Grid>
             </Grid>

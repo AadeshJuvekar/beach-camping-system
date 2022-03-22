@@ -14,6 +14,7 @@ import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import GlobalStyles from "@mui/material/GlobalStyles";
 import Container from "@mui/material/Container";
+import { NavLink } from "react-router-dom";
 
 function Copyright(props) {
   return (
@@ -56,7 +57,7 @@ const tiers = [
       "Help center access",
       "Priority email support",
     ],
-    buttonText: "Get started",
+    buttonText: "Register",
     buttonVariant: "contained",
   },
   {
@@ -172,7 +173,7 @@ function PricingContent() {
                   </CardContent>
                   <CardActions>
                     <Button fullWidth variant={tier.buttonVariant}>
-                      {tier.buttonText}
+                      <NavLink to="/api/register">{tier.buttonText}</NavLink>
                     </Button>
                   </CardActions>
                 </Card>

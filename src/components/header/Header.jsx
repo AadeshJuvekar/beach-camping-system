@@ -2,6 +2,7 @@ import { BeachAccess } from "@mui/icons-material";
 import React from "react";
 import "./header.css";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { NavLink } from "react-router-dom";
 function Header() {
   return (
     <div className="header">
@@ -21,8 +22,9 @@ function Header() {
               offset={-70}
               duration={500}
             >
-              {" "}
-              <span className="headerMenuItem">Home</span>
+              <NavLink to="/" style={{ textDecoration: 'inherit', color:'inherit'}}>
+                <span className="headerMenuItem">Home</span>
+              </NavLink>
             </Link>
 
             <Link

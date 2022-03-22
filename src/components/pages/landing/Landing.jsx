@@ -1,5 +1,6 @@
 import React from "react";
 import "./landing.css";
+import { Link } from "react-scroll";
 
 function Landing() {
   return (
@@ -11,9 +12,27 @@ function Landing() {
             Sky above, Sea Below <br />
             Peace Within
           </h3>
-
-          <button className="landingButton">Packages</button>
-          <button className="landingButton">Services</button>
+          <Link
+            activeClass="active"
+            to="packages"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            <button className="landingButton">Packages</button>
+          </Link>
+          <Link
+            activeClass="active"
+            to="services"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            {" "}
+            <button className="landingButton">Services</button>
+          </Link>
         </div>
       </div>
     </div>

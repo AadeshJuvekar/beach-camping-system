@@ -7,6 +7,7 @@ export const addUser = (user, history) => async (dispatch) => {
     console.log(user);
     await axios.post("/api/register", user);
     // history.push("/api/login");
+    window.location.href="/api/login";
   } catch (error) {
     dispatch({
       type: GET_ERRORS,

@@ -27,8 +27,8 @@ class RouteLinks extends Component {
     const { userSession } = this.props;
     return (
       <>
-        <Header userSession={userSession} logOutFunction={this.onLogout} />
         <Router>
+          <Header userSession={userSession} logOutFunction={this.onLogout} />
           <Routes>
             <Route exact path="/api/login" element={<SignIn />} />
             <Route exact path="/api/register" element={<SignUp />} />
@@ -45,8 +45,8 @@ class RouteLinks extends Component {
             userSession={userSession}
             permittedUser="loggedInUser"
           />
+          <Footer />
         </Router>
-        <Footer />
       </>
     );
   }
