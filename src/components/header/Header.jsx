@@ -1,6 +1,7 @@
 import { BeachAccess } from "@mui/icons-material";
 import React from "react";
 import "./header.css";
+import { Link, animateScroll as scroll } from "react-scroll";
 function Header() {
   return (
     <div className="header">
@@ -12,12 +13,72 @@ function Header() {
         </div>
         <div className="headerRight">
           <div className="headerMenu">
-            <span className="headerMenuItem">Home</span>
-            <span className="headerMenuItem">About</span>
-            <span className="headerMenuItem">Services</span>
-            <span className="headerMenuItem">Gallery</span>
-            <span className="headerMenuItem">Packages</span>
-            <span className="headerMenuItem">Contact</span>
+            <Link
+              activeClass="active"
+              to="landing"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              {" "}
+              <span className="headerMenuItem">Home</span>
+            </Link>
+
+            <Link
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <span className="headerMenuItem">About</span>
+            </Link>
+            <Link
+              activeClass="active"
+              to="services"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <span className="headerMenuItem">Services</span>
+            </Link>
+
+            <Link
+              activeClass="active"
+              to="gallery"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <span className="headerMenuItem">Gallery</span>
+            </Link>
+
+            <Link
+              activeClass="active"
+              to="packages"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              {" "}
+              <span className="headerMenuItem">Packages</span>
+            </Link>
+
+            <Link
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <span className="headerMenuItem">Contact</span>
+            </Link>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import beach from "../../../static/images/bg.jpg";
 
 function About() {
   return (
-    <div className="about">
+    <div className="about" id="about">
       <div className="aboutContainer">
         <h1 className="aboutTitle">About Beach Camping System</h1>
         <img src={beach} alt="Beach Camping" className="aboutImage" />

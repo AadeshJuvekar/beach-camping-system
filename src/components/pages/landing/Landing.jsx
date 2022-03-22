@@ -3,7 +3,7 @@ import "./landing.css";
 
 function Landing() {
   return (
-    <div className="landing">
+    <div className="landing" id="landing">
       <div className="landingContainer">
         <div className="landingBody">
           <h1 className="landingText">Alibag Beach Camping</h1>

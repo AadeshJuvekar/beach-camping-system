@@ -14,7 +14,7 @@ const PrivateRoute = ({
         userSession.userType !== undefined ? (
           userSession.userType === "notLoggedIn" ? (
             <Navigate to="/api/login" />
-          ) : userSession.userType === permittedUser ? (
+          ) : userSession.userType === "loggedInUser" ? (
             <Component {...props} />
           ) : (
             <h1>unAuthorised Access</h1>

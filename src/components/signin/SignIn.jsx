@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -21,17 +21,10 @@ const theme = createTheme();
 
 
 export default function SignIn() {
+  // const [state, setstate] = useState({name:"" ,loginName:"",pwd:""} );
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      loginName: data.get("userName"),
-      pwd: data.get("password"),
-    });
-    console.log({
-      loginName: data.get("userName"),
-      pwd: data.get("password"),
-    });
+    // console.log(state);
   };
 
   return (

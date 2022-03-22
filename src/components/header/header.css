@@ -49,7 +49,7 @@
 .headerMenuItem:hover{
     border-bottom:  2px solid rgb(0, 0, 0);
 }
-.headerMenuItem:active{
+.headerMenuItem > .active{
     color: darkgray;
-    border-bottom:  2px solid darkgray;
+    border:  2px solid darkgray;
 }

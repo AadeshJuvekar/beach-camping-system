@@ -26,16 +26,3 @@ export const destroySession = () => async (dispatch) => {
   const res = await axios.get("/api/logout");
   window.location.replace("/");
 };
-
-export const addUser = (userDetail, history) => async (dispatch) => {
-  try {
-    console.log(userDetail);
-    await axios.post("/api/register", userDetail);
-    history.push("/");
-  } catch (error) {
-    dispatch({
-      type: GET_ERRORS,
-      payload: error.response.data,
-    });
-  }
-};

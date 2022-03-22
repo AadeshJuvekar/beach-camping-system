@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import {
   BrowserRouter as Router,
@@ -14,6 +14,7 @@ import SignUp from "./components/signup/Signup";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import { getSession, destroySession } from "./actions/userSession";
+import Profile from "./components/pages/profile/Profile";
 
 class RouteLinks extends Component {
   componentDidMount() {
@@ -26,40 +27,26 @@ class RouteLinks extends Component {
     const { userSession } = this.props;
     return (
       <>
+        <Header userSession={userSession} logOutFunction={this.onLogout} />
         <Router>
-          <Header userSession={userSession} logOutFunction={this.onLogout} />
           <Routes>
             <Route exact path="/api/login" element={<SignIn />} />
             <Route exact path="/api/register" element={<SignUp />} />
             <Route exact path="/api/update" element={<SignUp />}></Route>
-
-            {/* Product Owner Private Links Start */}
-            {/* <PrivateRoute
-              exact
-              path="/productowner/dashboard"
-              component={OwnerDashboard}
-              userSession={userSession}
-              permittedUser="ProductOwner"
-            />
-            <PrivateRoute
-              exact
-              path="/productOwner/viewTask/:taskIdentifier"
-              component={OwnerViewTask}
-              userSession={userSession}
-              permittedUser="ProductOwner"
-            />
-            <PrivateRoute
-              exact
-              path="/productowner/authoriseclient/:taskIdentifier"
-              component={AuthorizeClient}
-              userSession={userSession}
-              permittedUser="ProductOwner"
-            /> */}
-            {/* Product Owner Private Links End */}
-            <Route exact path="/api" element={<HomePage />} />
+            {/* {/* <Route exact path="/api" element={<HomePage />} /> */}
+            <Route exact path="/" element={<HomePage />} />
+            {/* LoggedInUser Private Links Start */}
+            {/* loggedInUser Private Links End */}
           </Routes>
-          <Footer />
+          <PrivateRoute
+            exact
+            path="/api/profile"
+            element={Profile}
+            userSession={userSession}
+            permittedUser="loggedInUser"
+          />
         </Router>
+        <Footer />
       </>
     );
   }
