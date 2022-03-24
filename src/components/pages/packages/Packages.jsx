@@ -27,7 +27,7 @@ const tiers = [
       "Bonfire🔥",
       "BBQ🍗",
       "Washrooms Available🚻",
-      "24/7 Care Taker👨🏻"
+      "24/7 Care Taker👨🏻",
     ],
     buttonText: "BOOK NOW",
   },
