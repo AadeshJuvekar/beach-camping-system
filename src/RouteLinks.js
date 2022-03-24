@@ -19,10 +19,6 @@ import Profile from "./components/pages/profile/Profile";
 class RouteLinks extends Component {
   componentDidMount() {
     this.props.getSession();
-    window.history.scrollRestoration = "manual";
-  }
-  componentWillUnmount() {
-    window.history.scrollRestoration = "manual";
   }
   onLogout = (event) => {
     this.props.destroySession();
