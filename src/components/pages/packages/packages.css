@@ -1,0 +1,18 @@
+.packages{
+    top: 2rem;
+    min-height: 90%;
+    width: 100%;
+    position: relative;
+}
+.packagesTitle{  
+    font-weight: 600 !important;  
+    font-size: 50px !important;
+}
+.packagesDescription{
+    margin: auto -40% !important;   
+    padding: 0.1em !important;
+    display: block !important;
+    color: grey !important;       
+    text-align: justify !important;    
+    font-size: 21px !important;
+}

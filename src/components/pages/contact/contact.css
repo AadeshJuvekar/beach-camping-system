@@ -1,0 +1,14 @@
+.contact{
+    top: 4rem;
+    height: 90%;
+    width: 100%;
+    position: relative;    
+}
+.contactTitle{  
+    font-weight: 600 !important;  
+    font-size: 50px !important;
+}
+.contactEnd{
+    height: 4em;
+    visibility: hidden;
+}
