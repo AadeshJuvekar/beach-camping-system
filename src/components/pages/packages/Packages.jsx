@@ -30,6 +30,7 @@ const tiers = [
       "24/7 Care Taker👨🏻",
     ],
     buttonText: "BOOK NOW",
+    buttonLink: "/api/register",
   },
   {
     title: "Premium",
@@ -49,6 +50,7 @@ const tiers = [
       "24/7 Care Taker👨🏻",
     ],
     buttonText: "BOOK NOW",
+    buttonLink: "/api/login",
   },
 ];
 
@@ -157,14 +159,18 @@ function Packages() {
                     </ul>
                   </CardContent>
                   <CardActions>
-                    <Button fullWidth variant="contained">
-                      <NavLink
-                        to="/api/register"
-                        style={{ textDecoration: "inherit", color: "inherit" }}
-                      >
+                    <NavLink
+                      to={tier.buttonLink}
+                      style={{
+                        textDecoration: "inherit",
+                        color: "inherit",
+                        width: "100%",
+                      }}
+                    >
+                      <Button fullWidth variant="contained">
                         {tier.buttonText}
-                      </NavLink>
-                    </Button>
+                      </Button>{" "}
+                    </NavLink>
                   </CardActions>
                 </Card>
               </Grid>
