@@ -13,7 +13,11 @@ function Contact() {
   const theme = createTheme();
   const handleSubmit = (event) => {
     event.preventDefault();
+<<<<<<< HEAD
     window.alert("Registration Succesful");
+=======
+    window.alert("Sent Succesfully");
+>>>>>>> e3454e198b5c47bbbcd04bd5fcb82b397fd1568c
   };
   return (
     <div className="contact" id="contact">
@@ -29,7 +33,11 @@ function Contact() {
                 alignItems: "center",
               }}
             >
+<<<<<<< HEAD
               <Typography component="h1" variant="h4">
+=======
+              <Typography component="h1" variant="h4" className="contactTitle">
+>>>>>>> e3454e198b5c47bbbcd04bd5fcb82b397fd1568c
                 Enquire Now
               </Typography>
               <Box
@@ -91,6 +99,10 @@ function Contact() {
             </Box>
           </Container>
         </ThemeProvider>
+<<<<<<< HEAD
+=======
+        <div className="contactEnd"></div>
+>>>>>>> e3454e198b5c47bbbcd04bd5fcb82b397fd1568c
       </div>
     </div>
   );

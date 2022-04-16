@@ -1,9 +1,14 @@
 import { BeachAccess } from "@mui/icons-material";
-import React from "react";
+import React, { useEffect } from "react";
 import "./header.css";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { NavLink } from "react-router-dom";
+import smooth from "react-scroll/modules/mixins/smooth";
 function Header() {
+  useEffect(() => {
+    scroll.scrollToTop();
+  }, []);
+
   return (
     <div className="header">
       <div className="headerContainer"></div>

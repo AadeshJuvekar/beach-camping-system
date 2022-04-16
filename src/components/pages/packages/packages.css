@@ -3,5 +3,20 @@
     min-height: 90%;
     width: 100%;
     position: relative;
+<<<<<<< HEAD
     margin-top: 3em;
+=======
+}
+.packagesTitle{  
+    font-weight: 600 !important;  
+    font-size: 50px !important;
+}
+.packagesDescription{
+    margin: auto -40% !important;   
+    padding: 0.1em !important;
+    display: block !important;
+    color: grey !important;       
+    text-align: justify !important;    
+    font-size: 21px !important;
+>>>>>>> e3454e198b5c47bbbcd04bd5fcb82b397fd1568c
 }

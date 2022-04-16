@@ -17,13 +17,43 @@ const tiers = [
   {
     title: "Standard",
     price: "1299",
+<<<<<<< HEAD
+=======
     description: [
-      "20 users included",
-      "10 GB of storage",
-      "Help center access",
-      "Priority email support",
+      "Welcome Drink🍹",
+      "Tent Stay🎪",
+      "Breakfast🍳",
+      "Music System🎵",
+      "Games & Group Activities 🎤",
+      "Unlimited Food🥘(non-veg/veg)",
+      "Bonfire🔥",
+      "BBQ🍗",
+      "Washrooms Available🚻",
+      "24/7 Care Taker👨🏻",
     ],
     buttonText: "BOOK NOW",
+    buttonLink: "/api/register",
+  },
+  {
+    title: "Premium",
+    price: "1999",
+>>>>>>> e3454e198b5c47bbbcd04bd5fcb82b397fd1568c
+    description: [
+      "Welcome Drink🍹",
+      "Tent Stay with proper bedding 🎪",
+      "Breakfast🍳",
+      "Music System🎵",
+      "Games & Group Activities 🎤",
+      "Unlimited Food🥘(non-veg/veg)",
+      "Bonfire🔥",
+      "Evening Snacks",
+      "Unlimited BBQ🍗",
+      "Movie night",
+      "Washrooms Available🚻",
+      "24/7 Care Taker👨🏻",
+    ],
+    buttonText: "BOOK NOW",
+<<<<<<< HEAD
   },
   {
     title: "Premium",
@@ -35,6 +65,9 @@ const tiers = [
       "Phone & email support",
     ],
     buttonText: "BOOK NOW",
+=======
+    buttonLink: "/api/login",
+>>>>>>> e3454e198b5c47bbbcd04bd5fcb82b397fd1568c
   },
 ];
 
@@ -59,6 +92,7 @@ function Packages() {
             variant="h2"
             align="center"
             color="text.primary"
+            className="packagesTitle"
             gutterBottom
           >
             Packages
@@ -68,10 +102,21 @@ function Packages() {
             align="center"
             color="text.secondary"
             component="p"
+            className="packagesDescription"
           >
-            Quickly build an effective pricing table for your potential
-            customers with this layout. It&apos;s built with default MUI
-            components with little customization.
+            <p>
+              Sometimes all you need is a warm bonfire and soft roaring waves
+              crashing on the beach while you fall asleep closer to nature. And
+              sometimes all you need is a Beach Camping. Yes, you heard us
+              right!
+            </p>
+            <p>
+              Camping isn’t always done into the jungle or in the mountains or
+              grasslands; it doesn’t always involve you into encountering a wild
+              animal. Beach camping can be as exhilarating as any other camping,
+              but the amount of fun and the memories you make when you camp on
+              the beach is altogether a different experience.
+            </p>
           </Typography>
         </Container>
         {/* End hero unit */}
@@ -107,11 +152,19 @@ function Packages() {
                       }}
                     >
                       <Typography
+<<<<<<< HEAD
                         component="h2"
                         variant="h4"
                         color="text.primary"
                       >
                         {tier.price}
+=======
+                        component="h3"
+                        variant="h4"
+                        color="text.primary"
+                      >
+                        ₹{tier.price}
+>>>>>>> e3454e198b5c47bbbcd04bd5fcb82b397fd1568c
                       </Typography>
                       <Typography variant="h6" color="text.secondary">
                         /person
@@ -131,6 +184,7 @@ function Packages() {
                     </ul>
                   </CardContent>
                   <CardActions>
+<<<<<<< HEAD
                     <Button fullWidth variant="contained">
                       <NavLink
                         to="/api/register"
@@ -139,6 +193,20 @@ function Packages() {
                         {tier.buttonText}
                       </NavLink>
                     </Button>
+=======
+                    <NavLink
+                      to={tier.buttonLink}
+                      style={{
+                        textDecoration: "inherit",
+                        color: "inherit",
+                        width: "100%",
+                      }}
+                    >
+                      <Button fullWidth variant="contained">
+                        {tier.buttonText}
+                      </Button>{" "}
+                    </NavLink>
+>>>>>>> e3454e198b5c47bbbcd04bd5fcb82b397fd1568c
                   </CardActions>
                 </Card>
               </Grid>
@@ -149,5 +217,8 @@ function Packages() {
     </div>
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e3454e198b5c47bbbcd04bd5fcb82b397fd1568c
 export default Packages;

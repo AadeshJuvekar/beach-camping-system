@@ -2,6 +2,18 @@
     top: 4rem;
     height: 90%;
     width: 100%;
+<<<<<<< HEAD
     position: relative;
     margin-bottom: 2em;
+=======
+    position: relative;    
+}
+.contactTitle{  
+    font-weight: 600 !important;  
+    font-size: 50px !important;
+}
+.contactEnd{
+    height: 4em;
+    visibility: hidden;
+>>>>>>> e3454e198b5c47bbbcd04bd5fcb82b397fd1568c
 }
