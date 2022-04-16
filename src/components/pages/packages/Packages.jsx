@@ -1,5 +1,5 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
+import "./packages.css";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
@@ -8,76 +8,40 @@ import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
-import StarIcon from "@mui/icons-material/StarBorder";
-import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
 import GlobalStyles from "@mui/material/GlobalStyles";
 import Container from "@mui/material/Container";
 import { NavLink } from "react-router-dom";
 
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
-
 const tiers = [
   {
-    title: "Free",
-    price: "0",
-    description: [
-      "10 users included",
-      "2 GB of storage",
-      "Help center access",
-      "Email support",
-    ],
-    buttonText: "Sign up for free",
-    buttonVariant: "outlined",
-  },
-  {
-    title: "Pro",
-    subheader: "Most popular",
-    price: "15",
+    title: "Standard",
+    price: "1299",
     description: [
       "20 users included",
       "10 GB of storage",
       "Help center access",
       "Priority email support",
     ],
-    buttonText: "Register",
-    buttonVariant: "contained",
+    buttonText: "BOOK NOW",
   },
   {
-    title: "Enterprise",
-    price: "30",
+    title: "Premium",
+    price: "1999",
     description: [
       "50 users included",
       "30 GB of storage",
       "Help center access",
       "Phone & email support",
     ],
-    buttonText: "Contact us",
-    buttonVariant: "outlined",
+    buttonText: "BOOK NOW",
   },
 ];
 
-function PricingContent() {
+function Packages() {
   return (
     <div className="packages" id="packages">
-      <React.Fragment>
+      <div className="packagesContainer">
         <GlobalStyles
           styles={{ ul: { margin: 0, padding: 0, listStyle: "none" } }}
         />
@@ -97,7 +61,7 @@ function PricingContent() {
             color="text.primary"
             gutterBottom
           >
-            Pricing
+            Packages
           </Typography>
           <Typography
             variant="h5"
@@ -119,18 +83,13 @@ function PricingContent() {
                 item
                 key={tier.title}
                 xs={12}
-                sm={tier.title === "Enterprise" ? 12 : 6}
-                md={4}
+                sm={tier.title === "Premium" ? 12 : 6}
+                md={6}
               >
                 <Card>
                   <CardHeader
                     title={tier.title}
-                    subheader={tier.subheader}
                     titleTypographyProps={{ align: "center" }}
-                    action={tier.title === "Pro" ? <StarIcon /> : null}
-                    subheaderTypographyProps={{
-                      align: "center",
-                    }}
                     sx={{
                       backgroundColor: (theme) =>
                         theme.palette.mode === "light"
@@ -149,13 +108,13 @@ function PricingContent() {
                     >
                       <Typography
                         component="h2"
-                        variant="h3"
+                        variant="h4"
                         color="text.primary"
                       >
-                        ${tier.price}
+                        {tier.price}
                       </Typography>
                       <Typography variant="h6" color="text.secondary">
-                        /mo
+                        /person
                       </Typography>
                     </Box>
                     <ul>
@@ -172,8 +131,13 @@ function PricingContent() {
                     </ul>
                   </CardContent>
                   <CardActions>
-                    <Button fullWidth variant={tier.buttonVariant}>
-                      <NavLink to="/api/register">{tier.buttonText}</NavLink>
+                    <Button fullWidth variant="contained">
+                      <NavLink
+                        to="/api/register"
+                        style={{ textDecoration: "inherit", color: "inherit" }}
+                      >
+                        {tier.buttonText}
+                      </NavLink>
                     </Button>
                   </CardActions>
                 </Card>
@@ -181,11 +145,9 @@ function PricingContent() {
             ))}
           </Grid>
         </Container>
-      </React.Fragment>
+      </div>
     </div>
   );
 }
 
-export default function Pricing() {
-  return <PricingContent />;
-}
+export default Packages;

@@ -22,7 +22,10 @@ function Header() {
               offset={-70}
               duration={500}
             >
-              <NavLink to="/" style={{ textDecoration: 'inherit', color:'inherit'}}>
+              <NavLink
+                to="/"
+                style={{ textDecoration: "inherit", color: "inherit" }}
+              >
                 <span className="headerMenuItem">Home</span>
               </NavLink>
             </Link>
@@ -67,13 +70,12 @@ function Header() {
               offset={-70}
               duration={500}
             >
-              {" "}
               <span className="headerMenuItem">Packages</span>
             </Link>
 
             <Link
               activeClass="active"
-              to="about"
+              to="contact"
               spy={true}
               smooth={true}
               offset={-70}

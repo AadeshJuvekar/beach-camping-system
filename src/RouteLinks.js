@@ -37,6 +37,7 @@ class RouteLinks extends Component {
             <Route exact path="/" element={<HomePage />} />
             {/* LoggedInUser Private Links Start */}
             {/* loggedInUser Private Links End */}
+            <Route>404 NOT FOUND</Route>
           </Routes>
           <PrivateRoute
             exact
